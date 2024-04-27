@@ -1,14 +1,11 @@
 import React from 'react';
+import Authenticated from '@/Layouts/AuthenticatedLayout';
 
-import Authenticated from '@/Layouts/Authenticated';
-
-import { Head, useForm, Link } from '@inertiajs/inertia-react';
+import { Head, useForm, Link, usePage } from '@inertiajs/react';
 
 
 
 export default function Dashboard(props) {
-
-
 
     const { data, setData, errors, post } = useForm({
 

@@ -1,4 +1,5 @@
 import ApplicationLogo from "@/Components/ApplicationLogo";
+import NavLink from "@/Components/NavLink";
 import { Link } from "@inertiajs/react";
 
 export default function Guest({ children }) {
@@ -8,12 +9,6 @@ export default function Guest({ children }) {
                 <Link href="/">
                     <ApplicationLogo className="w-20 h-20 fill-current text-gray-500" />
                 </Link>
-                <NavLink
-                    href={route("posts.index")}
-                    active={route().current("posts.index")}
-                >
-                    Posts
-                </NavLink>
             </div>
 
             <div className="w-full sm:max-w-md mt-6 px-6 py-4 bg-white shadow-md overflow-hidden sm:rounded-lg">

@@ -1,11 +1,6 @@
+import Authenticated from '@/Layouts/AuthenticatedLayout';
+import { Head, Link, router, usePage } from '@inertiajs/react';
 import React from 'react';
-
-import Authenticated from '@/Layouts/Authenticated';
-
-import { Inertia } from "@inertiajs/inertia";
-
-import { Head, usePage, Link } from '@inertiajs/inertia-react';
-
 
 
 export default function Dashboard(props) {
@@ -18,7 +13,7 @@ export default function Dashboard(props) {
 
         if (confirm("Are you sure you want to delete this user?")) {
 
-            Inertia.delete(route("posts.destroy", e.currentTarget.id));
+            router.delete(route("posts.destroy", e.currentTarget.id));
 
         }
 
@@ -92,7 +87,7 @@ export default function Dashboard(props) {
 
                                     {posts.map(({ id, title, body }) => (
 
-                                        <tr>
+                                        <tr key={id}>
 
                                             <td className="border px-4 py-2">{ id }</td>
 
