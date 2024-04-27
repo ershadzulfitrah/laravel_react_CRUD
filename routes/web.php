@@ -10,7 +10,7 @@ use App\Http\Controllers\PostController;
 
 
 
-Route::resource('posts', PostController::class);
+Route::resource('posts', PostController::class)->middleware(['auth', 'verified']);
 
 
 
